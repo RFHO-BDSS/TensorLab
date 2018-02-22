@@ -1,0 +1,24 @@
+{
+    "input": {
+        "dirs": {
+            "data":"/data/MRCLEAN_collaterals/REGISTRY/CTA_THIN"
+        },
+        "names": {
+            "type":"tvt",
+            "split":"0.39mm_0.61mm_15%_70_10_20.json"
+        }
+    },
+    "output": {
+        "dirs": {
+            "logs": "./logs"
+        },
+        "ext": {
+            "ckpt": "checkpoints",
+            "scms": "schemas",
+            "smrs": "summaries"
+        },
+        "names": {
+            "ckpt": "best.ckpt"
+        }
+    }
+}

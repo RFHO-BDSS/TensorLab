@@ -1,0 +1,74 @@
+{
+    "augmentation": {
+        "testing": {
+            "multiplier": 1,
+            "num_batches": null,
+            "type": "batch"
+        },
+        "training": {
+            "multiplier": 1,
+            "num_batches": 1e5,
+            "type": "gaussian"
+        },
+        "validation": {
+            "multiplier": 1,
+            "num_batches": 20,
+            "type": "batch"
+        }
+    },
+    "evaluation": {
+        "comparison_samples": 20,
+        "eval_freq": 1000.0,
+        "max_epochs": 40,
+        "queue": {
+            "training": {
+                "freq": 1000.0,
+                "summaries": 1
+            },
+            "validation": {
+                "freq": 10.0,
+                "summaries": 0
+            }
+        },
+        "write_summaries": 1
+    },
+    "learning_rate": {
+        "decay_type": "Exponential",
+        "initial_rate": 1e-5,
+        "kwargs": {
+            "decay_rate": 0.5,
+            "decay_steps": 1e5
+        },
+        "name": "learning_rate"
+    },
+    "optimizer": {
+        "clip_max": 1,
+        "kwargs": {},
+        "name": "Optimizer",
+        "optimizer_type": "Momentum",
+        "regularizer_scale": 0.01
+    },
+    "queue": {
+        "testing": {
+            "batch_size": 50,
+            "grace_period": 30,
+            "n_threads": 4,
+            "name": "testing_queue",
+            "size": 8
+        },
+        "training": {
+            "batch_size": 50,
+            "grace_period": 30,
+            "n_threads": 2,
+            "name": "training_queue",
+            "size": 8
+        },
+        "validation": {
+            "batch_size": 50,
+            "grace_period": 30,
+            "n_threads": 2,
+            "name": "validation_queue",
+            "size": 8
+        }
+    }
+}
